@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="main-heading">
+        <div class="logo">
+            <img src="images/tic-tac-toe-logo.png" alt="logo tic-tac-toe">
+        </div>
+        <h2>TIC  TAC TOE Game</h2>
+    </header>
+    <section class="player">
+        <button class="btn" id = "player-x" onclick="setPlayer(`player-x`)">Player X</button>
+        <button class="btn" id = "player-o" onclick="setPlayer(`player-o`)">Player O</button>
+        <button class="btn hide" id = "resetbtn" onclick="resetGame()">Reset</button>
+    </section>
+    <section class="playarea hide" id = "playboard">
+        <div class="row" id = "firstrow">
+            <span id = "span1" class = "playbox"onclick="setSign(event,0,0)"></span>
+            <span id = "span2" class = "playbox"onclick="setSign(event,0,1)"></span>
+            <span id = "span3" class = "playbox"onclick="setSign(event,0,2)"></span>
+        </div>
+
+
+        
+        <div class="row" id = "secondrow">
+            <span id = "span4" class = "playbox"onclick="setSign(event,1,0)"></span>
+            <span id = "span5" class = "playbox"onclick="setSign(event,1,1)"></span>
+            <span id = "span6" class = "playbox"onclick="setSign(event,1,2)"></span>
+        </div>
+        <div class="row" id ="thirdRow">
+            <span id = "span7" class = "playbox"onclick="setSign(event,2,0)"></span>
+            <span id = "span8" class = "playbox"onclick="setSign(event,2,1)"></span>
+            <span id = "span9" class = "playbox"onclick="setSign(event,2,2)"></span>
+        </div>
+    </section>
+    <section class="winner"> 
+        <p id = "win"></p>
+    </section>
+    <section class="tagline">
+        <p>This game made by Dharmesh Pal</p>
+    </section>
+    <script src="JS/script.js"></script>
+</body>
+</html>
